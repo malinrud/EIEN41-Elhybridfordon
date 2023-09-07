@@ -1,0 +1,12 @@
+energy = [];
+
+Pem_max_v = [208000 320000]
+
+for i=1:2
+    Vehicle = i;
+
+
+    InitiateEVha;
+    sim("GeneralEV\GeneralFEVmodel");
+    energy(Vehicle, ii) = EnergyMes.data(end);
+end
